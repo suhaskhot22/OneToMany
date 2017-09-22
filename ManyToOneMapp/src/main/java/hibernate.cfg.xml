@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+   <session-factory>
+	  <property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
+	  <property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver </property>
+	  <property name="hibernate.connection.url">jdbc:hsqldb:hsql://localhost/</property>
+	  <property name="hibernate.connection.username">SA</property>
+	  <property name="hibernate.connection.password"></property>
+	  
+	  <property name="hibernate.hbm2ddl.auto">update</property>
+	   <property name="hibernate.showsql">true</property>
+  
+  <mapping class="com.map.bi.Employee"/> 
+   <mapping class="com.map.bi.Company"/> 
+   
+   <!-- 
+   <mapping class="com.map.uni.Employee"/> 
+   <mapping class="com.map.uni.Company"/>  -->
+   
+
+</session-factory>
+</hibernate-configuration>
